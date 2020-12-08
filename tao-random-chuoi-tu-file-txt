@@ -1,0 +1,7 @@
+            // Tạo chuỗi random từ file txt
+            Random rd = new Random();
+            string[] lines = File.ReadAllLines(@"data\ho.txt");
+            var randomLineNumber = rd.Next(0, lines.Length);
+            var line = lines[randomLineNumber]; //getting the random line
+            tboxHo.Text = line;
+            Clipboard.SetText(line); //Copy vào bộ nhớ
